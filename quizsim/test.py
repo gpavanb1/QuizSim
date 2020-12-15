@@ -1,8 +1,21 @@
 import unittest
 import numpy as np
-from main import runQuiz
+from quizsim.main import runQuiz
 
 class TestRunQuiz(unittest.TestCase):
+    def test_wrong_dim(self):
+        try:
+            runQuiz(30, [0.0], [1.0, 0.0])
+        except:
+            self.assertTrue()
+
+    def test_null(self):
+        try:
+            runQuiz(30, [], [])
+        except:
+            self.assertTrue()
+
+
     def test_stupid_teams_chennai(self):
         CAN_POUNCE = True
         BOUNCE_TYPE = 'Chennai'

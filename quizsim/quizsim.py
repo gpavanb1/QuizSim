@@ -1,6 +1,6 @@
 # TODO : Part points
 import numpy as np
-from helper import checkBounce, checkPounce, knowAnswer
+from quizsim.helper import checkBounce, checkPounce, knowAnswer
 
 def runQuiz(NUM_QUESTIONS=30,\
 TEAM_STRENGTH=[1.0, 0.0], \
