@@ -18,6 +18,17 @@ from quizsim import runQuiz
 print(runQuiz())
 ```
 
+## Parameters
+
+* NUM_QUESTIONS - Number of questions in the quiz (default: 30)
+* TEAM_STRENGTH - List giving chance (between 0 and 1) that team answers a question correctly (default: [1.0, 0.0])
+* POUNCE_DARE - List giving chance (between 0 and 1) that team pounces on a question (default: [1.0, 0.0])
+* CAN_POUNCE - Boolean whether pounce is allowed in quiz (default: True)
+* BOUNCE_TYPE - When nobody answers the previous question on bounce, the direct moves to either next team to previous (Bengaluru) or same team as previous gets it (Chennai) - (default: Bengaluru)
+* POUNCE_RIGHT - Points for right answer on pounce (default: 15)
+* POUNCE_WRONG - Points for wrong answer on pounce (default: -10)
+* BOUNCE_RIGHT - Points for right answer on bounce (default: 10)
+
 ## How to test?
 
 You can run the default tests using
