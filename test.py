@@ -3,6 +3,32 @@ import numpy as np
 from main import runQuiz
 
 class TestRunQuiz(unittest.TestCase):
+    def test_stupid_teams_chennai(self):
+        CAN_POUNCE = True
+        BOUNCE_TYPE = 'Chennai'
+        POUNCE_DARE = [1.0, 1.0]
+        TEAM_STRENGTH = [0.0, 0.0]
+        output = runQuiz(30, TEAM_STRENGTH, \
+        POUNCE_DARE, CAN_POUNCE, BOUNCE_TYPE)
+        # Q1 - Team 1 direct, misses it. Team 2 pounced and negs
+        # Chennai bounce so Team 1 direct again and so on
+        expected = np.array([0.0, -300.0])
+        self.assertTrue(np.alltrue(output == expected))
+
+    def test_stupid_teams_bengaluru(self):
+        CAN_POUNCE = True
+        BOUNCE_TYPE = 'Bengaluru'
+        POUNCE_DARE = [1.0, 1.0]
+        TEAM_STRENGTH = [0.0, 0.0]
+        output = runQuiz(30, TEAM_STRENGTH, \
+        POUNCE_DARE, CAN_POUNCE, BOUNCE_TYPE)
+        # Q1 - Team 1 direct, misses it. Team 2 pounced and negs
+        # Team 2 direct now
+        # Q2 - Team 1 pounces and negs. Team 2 misses it.
+        # Team 1 now and so on
+        expected = np.array([-150.0, -150.0])
+        self.assertTrue(np.alltrue(output == expected))
+
     def test_only_pounce_chennai(self):
         CAN_POUNCE = True
         BOUNCE_TYPE = 'Chennai'
