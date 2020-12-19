@@ -4,7 +4,7 @@
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)
 [![Downloads](https://pepy.tech/badge/quizsim)](https://pepy.tech/project/quizsim)
 
-# How to install and execute?
+## How to install and execute?
 
 Just run 
 ```
